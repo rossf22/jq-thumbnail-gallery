@@ -1,0 +1,216 @@
+/* ------------------------------
+   BASIC PAGE STYLES
+--------------------------------- */
+
+/* Apply border-box sizing to every element.
+   This makes width and height easier to manage. */
+* {
+  box-sizing: border-box;
+}
+
+/* Style the whole page background, default text color,
+   font choice, and spacing between lines of text. */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f7fafc;
+  color: #1a202c;
+  line-height: 1.4;
+}
+
+/* Make images behave more predictably.
+   display: block removes extra inline spacing.
+   max-width: 100% keeps images from overflowing their containers. */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Page container.
+   width: 90% gives side breathing room.
+   max-width keeps the layout from getting too wide on large screens.
+   margin: 0 auto centers the container horizontally. */
+.wrapper {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+/* Center the heading area and add space below it. */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Style the main page heading. */
+header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.25rem;
+}
+
+
+
+
+/* ------------------------------
+   FEATURED PROJECT
+--------------------------------- */
+
+/* Style the large featured project box.
+   White background makes it look like a card.
+   Rounded corners and shadow help it stand out.
+   overflow: hidden keeps the image clipped to the rounded corners. */
+.featured-project {
+  background-color: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.09);
+  margin-bottom: 2rem;
+}
+
+/* Make the featured image fill the full width of the card.
+   aspect-ratio keeps the shape consistent.
+   object-fit: cover lets the image crop nicely if needed. */
+#featured-image {
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  object-fit: cover;
+}
+
+/* Add space around the title and description text. */
+.featured-text {
+  padding: 1.5rem;
+}
+
+/* Style the featured project title. */
+.featured-text h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.6rem;
+}
+
+/* Style the featured project description. */
+.featured-text p {
+  margin-bottom: 0;
+  color: #4a5568;
+}
+
+
+/* ------------------------------
+   THUMBNAIL GALLERY
+--------------------------------- */
+
+/* Style the thumbnail gallery card. */
+.thumbnail-gallery {
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.09);
+  margin-bottom: 1rem;
+}
+
+/* Heading style for section title. */
+.thumbnail-gallery h2 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+/* Create a responsive grid for the thumbnails.
+   auto-fit tries to fit as many columns as possible.
+   minmax(150px, 1fr) means each column should be at least 100px wide. */
+.thumb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+/* Style each thumbnail image.
+   transparent border gives space for the active border later.
+   cursor: pointer makes it feel clickable.
+   transition makes hover and active effects animate smoothly. */
+.thumb {
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 4px solid transparent;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+/* Slightly enlarge the thumbnail on hover and add a shadow. */
+.thumb:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Highlight the currently selected thumbnail.
+   This class is added and removed with jQuery. */
+.thumb.active {
+  border-color: #805ad5;
+  box-shadow: 0 8px 20px rgba(128, 90, 213, 0.28);
+}
+
+
+
+
+
+
+
+
+/* ------------------------------
+   EXPLANATION SECTION
+--------------------------------- */
+
+/* Style the explanation box under the gallery.
+   This makes it visually match the other card sections. */
+.code-explanation {
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+hr.line {
+  border: none;
+  border-top: 1px solid silver;
+  margin: 2rem 0 0 0;
+}
+
+/* Add extra space above smaller headings inside the explanation area. */
+.code-explanation h3 {
+  margin-top: 1.5rem;
+}
+
+/* Add spacing below lists and definition lists. */
+.code-explanation ul,
+.code-explanation ol,
+.code-explanation dl {
+  margin-bottom: 1.25rem;
+}
+
+.code-explanation li {
+  margin: 0 0 0.25rem 1.5rem;
+}
+
+/* Style definition list terms like mini headings. */
+.code-explanation dt {
+  font-weight: bold;
+  margin-top: 0.75rem;
+}
+
+/* Style the matching description text in the definition list. */
+.code-explanation dd {
+  margin-left: 0;
+  margin-bottom: 0.75rem;
+  color: #4a5568;
+}
+
+/* Style inline code so it stands out from normal text. */
+.code-explanation code {
+  font-family: Consolas, Monaco, monospace;
+  background-color: #edf2f7;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+}

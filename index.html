@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Creative Showcase</title>
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="thumbnails.css">
+
+  <!-- JavaScript files -->
+  <!-- jQuery library must load before our custom script -->
+
+
+  <!-- Our custom jQuery code -->
+  
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Project Showcase</h1>
+      <p> Click a thumbnail to update the featured project.</p>
+    </header>
+
+    <!-- Thumbnail gallery -->
+    <section class="thumbnail-gallery">
+      <h2>Project Thumbnails</h2>
+
+      <!-- Grid container for the thumbnails -->
+      <div class="thumb-grid">
+
+        <!-- Thumbnail 1 -->
+        <img
+          class="thumb active"
+          src="images/stock01.png"
+          data-title="Concert Poster Campaign"
+          data-description="Poster design created to promote a live music event with strong typography and dramatic color contrast."
+          alt="Thumbnail for Concert Poster Campaign"
+        >
+
+        <!-- Thumbnail 2 -->
+        <img
+          class="thumb"
+          src="images/stock02.png"
+          data-title="Coffee Shop Website Mockup"
+          data-description="Homepage concept for a small café website featuring clear navigation, and a clean layout."
+          alt="Thumbnail for Coffee Shop Website Mockup"
+        >
+
+        <!-- Thumbnail 3 -->
+        <img
+          class="thumb"
+          src="images/stock03.png"
+          data-title="Portrait Series"
+          data-description="Portrait photography project focused on natural light, personality, and visual storytelling."
+          alt="Thumbnail for Portrait Series"
+        >
+
+        <!-- Thumbnail 4 -->
+        <img
+          class="thumb"
+          src="images/stock05.png"
+          data-title="Short Film Promo"
+          data-description="Promotional image designed for a student-produced short film using layered imagery."
+          alt="Thumbnail for Short Film Promo"
+        >
+
+      </div>
+    </section>
+
+    <!-- Featured project area -->
+    <section class="featured-project">
+
+      <!-- Main featured image -->
+      <img
+        id="featured-image"
+        src="images/stock01.png"
+        alt="Featured creative project"
+      >
+
+      <!-- Text content for the featured project -->
+      <div class="featured-text">
+        <h2 id="project-title">Concert Poster Campaign</h2>
+        <p id="project-description">
+          Poster design created to promote a live music event with strong typography and dramatic color contrast.
+        </p>
+      </div>
+    </section>
+
+    
+
+
+
+
+    <!-- Explanation section -->
+     <hr class="line">
+    <section class="code-explanation">
+      <h2 class="section-heading">How This HTML Works</h2>
+
+      <p>
+        This page is built as a simple interactive gallery. The top part of the page
+        shows a featured project, and the row of thumbnails underneath lets the user
+        choose a different project to display.
+      </p>
+
+      <h3>How the page is organized</h3>
+      <ol>
+        <li>
+          The <code>&lt;head&gt;</code> contains setup information like the page title,
+          CSS links, and JavaScript links.
+        </li>
+        <li>
+          The <code>&lt;body&gt;</code> contains the visible content of the page.
+        </li>
+        <li>
+          The featured project section contains the large image, title, and description.
+        </li>
+        <li>
+          The thumbnail gallery contains smaller clickable images.
+        </li>
+      </ol>
+
+      <h3>How the interactive part works</h3>
+      <p>
+        The large image at the top has the ID <code>featured-image</code>. The title has
+        the ID <code>project-title</code>, and the description has the ID
+        <code>project-description</code>. JavaScript uses these IDs to find and update
+        those parts of the page.
+      </p>
+
+      <p>
+        Each thumbnail stores extra information in its attributes:
+      </p>
+      <ul>
+        <li><code>src</code> = the image file</li>
+        <li><code>data-title</code> = the project title</li>
+        <li><code>data-description</code> = the project description</li>
+      </ul>
+
+      <p>
+        When a thumbnail is clicked, the JavaScript reads those values and uses them to:
+      </p>
+      <ul>
+        <li>change the featured image</li>
+        <li>change the project title</li>
+        <li>change the project description</li>
+        <li>update the active thumbnail styling</li>
+      </ul>
+
+      <h3>Why use IDs in the featured area?</h3>
+      <p>
+        An ID should be unique on the page. Since there is only one featured image,
+        one featured title, and one featured description, IDs are a good choice.
+      </p>
+
+      <h3>Why use classes on the thumbnails?</h3>
+      <p>
+        Classes can be reused on multiple elements. Since there are several thumbnail
+        images, using the class <code>thumb</code> makes sense.
+      </p>
+
+      <h3>Why use custom data attributes?</h3>
+      <p>
+        The attributes <code>data-title</code> and <code>data-description</code> store
+        extra information directly inside the HTML. This makes it easy for JavaScript
+        to read that information when a thumbnail is clicked.
+      </p>
+
+      <h2 class="section-heading">Glossary of HTML Terms</h2>
+      <dl>
+        <dt><code>&lt;!DOCTYPE html&gt;</code></dt>
+        <dd>Tells the browser this is an HTML5 document.</dd>
+
+        <dt><code>&lt;head&gt;</code></dt>
+        <dd>Contains setup information that is not displayed directly on the page.</dd>
+
+        <dt><code>&lt;body&gt;</code></dt>
+        <dd>Contains the visible content of the page.</dd>
+
+        <dt><code>&lt;title&gt;</code></dt>
+        <dd>Sets the text shown in the browser tab.</dd>
+
+        <dt><code>&lt;link&gt;</code></dt>
+        <dd>Connects an external CSS file to the page.</dd>
+
+        <dt><code>&lt;script&gt;</code></dt>
+        <dd>Connects a JavaScript file to the page.</dd>
+
+        <dt><code>&lt;main&gt;</code></dt>
+        <dd>Represents the main content area of the page.</dd>
+
+        <dt><code>&lt;header&gt;</code></dt>
+        <dd>Represents introductory content such as headings and instructions.</dd>
+
+        <dt><code>&lt;section&gt;</code></dt>
+        <dd>Groups related content together.</dd>
+
+        <dt><code>&lt;div&gt;</code></dt>
+        <dd>A general container used to group elements together.</dd>
+
+        <dt><code>&lt;img&gt;</code></dt>
+        <dd>Displays an image.</dd>
+
+        <dt><code>class</code></dt>
+        <dd>Used for styling or scripting multiple elements.</dd>
+
+        <dt><code>id</code></dt>
+        <dd>Used to uniquely identify one specific element.</dd>
+
+        <dt><code>src</code></dt>
+        <dd>The image file path used by an image element.</dd>
+
+        <dt><code>alt</code></dt>
+        <dd>Alternative text describing an image.</dd>
+
+        <dt><code>data-title</code></dt>
+        <dd>A custom data attribute storing the project title.</dd>
+
+        <dt><code>data-description</code></dt>
+        <dd>A custom data attribute storing the project description.</dd>
+      </dl>
+
+      <h2 class="section-heading">Important IDs and Classes</h2>
+      <ul>
+        <li><code>wrapper</code> - Main layout container for the page</li>
+        <li><code>featured-project</code> - Styles the featured project section</li>
+        <li><code>featured-image</code> - The large image that changes when a thumbnail is clicked</li>
+        <li><code>featured-text</code> - Wraps the featured title and description</li>
+        <li><code>project-title</code> - The title that JavaScript updates</li>
+        <li><code>project-description</code> - The description that JavaScript updates</li>
+        <li><code>thumbnail-gallery</code> - The section containing the thumbnails</li>
+        <li><code>thumb-grid</code> - The layout container for the thumbnails</li>
+        <li><code>thumb</code> - Applied to every thumbnail image</li>
+        <li><code>active</code> - Marks the thumbnail that is currently selected</li>
+      </ul>
+    </section>
+
+  </div>
+
+</body>
+</html>
