@@ -13,31 +13,31 @@ $(document).ready(function() {
     var fullImage = $(this).attr("src");
 
     // Get the project title stored in the clicked thumbnail's data-title attribute.
-    var projectTitle = 
+    var projectTitle = $(this).attr("data-title");
 
     // Get the project description stored in the clicked thumbnail's data-description attribute.
-    var projectDescription = 
+    var projectDescription = $(this).attr("data-description");
 
     // Remove the active class from every thumbnail.
     // This clears the old selection.
-    
+    $(".thumb").removeClass("active");
 
     // Add the active class to the thumbnail that was clicked.
     // This highlights the current thumbnail.
-    
+    $(this).addClass("active");
 
     // Fade out the featured image.
     // After it fades out, change the image source.
     // Then fade the image back in.
-    $("#featured-image").fadeOut(200, function() {
-      
+    $("#featured-image").fadeOut(100, function() {
+      $(this).attr("src", fullImage).fadeIn(100);
     });
 
     // Update the text inside the featured project title.
-    
+    $("#project-title").text(projectTitle);
 
     // Update the text inside the featured project description.
-    
+    $("#project-description").text(projectDescription);
 
   });
 
